@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Cult - Vänersborg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">☕ Cafe Cult</div>
+            <ul class="nav-links">
+                <li><a href="#hem">Hem</a></li>
+                <li><a href="#meny">Meny</a></li>
+                <li><a href="#om-oss">Om Oss</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#beställ" class="btn-order">Beställ Nu</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hem" class="hero">
+        <div class="hero-content">
+            <h1>Välkommen till Cafe Cult</h1>
+            <p>Världens bästa kaffe och bakverk i hjärtat av Vänersborg</p>
+            <a href="#beställ" class="btn btn-primary">Börja Beställa</a>
+        </div>
+    </section>
+
+    <!-- Meny Section -->
+    <section id="meny" class="meny">
+        <div class="container">
+            <h2>Vår Meny</h2>
+            <div class="meny-tabs">
+                <button class="tab-btn active" onclick="showCategory('kaffe')">Kaffe</button>
+                <button class="tab-btn" onclick="showCategory('drycker')">Drycker</button>
+                <button class="tab-btn" onclick="showCategory('bakverk')">Bakverk</button>
+                <button class="tab-btn" onclick="showCategory('lunch')">Lunch</button>
+            </div>
+
+            <div id="kaffe" class="meny-category active">
+                <div class="meny-grid">
+                    <div class="meny-item">
+                        <h3>Espresso</h3>
+                        <p>Stark och intensiv klassiker</p>
+                        <span class="pris">45 kr</span>
+                        <button class="btn-add" onclick="addToCart('Espresso', 45)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Cappuccino</h3>
+                        <p>Mjölk och skum perfekt blandad</p>
+                        <span class="pris">55 kr</span>
+                        <button class="btn-add" onclick="addToCart('Cappuccino', 55)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Latte</h3>
+                        <p>Mjölk och kaffe i perfekt harmoni</p>
+                        <span class="pris">55 kr</span>
+                        <button class="btn-add" onclick="addToCart('Latte', 55)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Americano</h3>
+                        <p>Klassisk svart kaffe</p>
+                        <span class="pris">45 kr</span>
+                        <button class="btn-add" onclick="addToCart('Americano', 45)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Macchiato</h3>
+                        <p>Espresso med en touch mjölk</p>
+                        <span class="pris">50 kr</span>
+                        <button class="btn-add" onclick="addToCart('Macchiato', 50)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Cortado</h3>
+                        <p>Perfekt balans mellan espresso och mjölk</p>
+                        <span class="pris">50 kr</span>
+                        <button class="btn-add" onclick="addToCart('Cortado', 50)">Lägg i Varukorg</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="drycker" class="meny-category">
+                <div class="meny-grid">
+                    <div class="meny-item">
+                        <h3>Smoothie Bär</h3>
+                        <p>Fruktfull och frisk</p>
+                        <span class="pris">65 kr</span>
+                        <button class="btn-add" onclick="addToCart('Smoothie Bär', 65)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Smoothie Tropisk</h3>
+                        <p>Exotisk blandning</p>
+                        <span class="pris">65 kr</span>
+                        <button class="btn-add" onclick="addToCart('Smoothie Tropisk', 65)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Varm Choklad</h3>
+                        <p>Klassiker på hösten och vintern</p>
+                        <span class="pris">50 kr</span>
+                        <button class="btn-add" onclick="addToCart('Varm Choklad', 50)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Iskaffe</h3>
+                        <p>Perfekt för varma dagar</p>
+                        <span class="pris">55 kr</span>
+                        <button class="btn-add" onclick="addToCart('Iskaffe', 55)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Te</h3>
+                        <p>Olika sorter att välja på</p>
+                        <span class="pris">40 kr</span>
+                        <button class="btn-add" onclick="addToCart('Te', 40)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Juice</h3>
+                        <p>Nygjord och färsk</p>
+                        <span class="pris">50 kr</span>
+                        <button class="btn-add" onclick="addToCart('Juice', 50)">Lägg i Varukorg</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bakverk" class="meny-category">
+                <div class="meny-grid">
+                    <div class="meny-item">
+                        <h3>Kanelbullar</h3>
+                        <p>Klassiska svenska bullar</p>
+                        <span class="pris">35 kr</span>
+                        <button class="btn-add" onclick="addToCart('Kanelbullar', 35)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Croissant</h3>
+                        <p>Franskt bakverk - smörig och frasig</p>
+                        <span class="pris">40 kr</span>
+                        <button class="btn-add" onclick="addToCart('Croissant', 40)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Blåbärsmuffin</h3>
+                        <p>Fylld med färska blåbär</p>
+                        <span class="pris">45 kr</span>
+                        <button class="btn-add" onclick="addToCart('Blåbärsmuffin', 45)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Chokladkaka</h3>
+                        <p>Smekalicious choklad</p>
+                        <span class="pris">50 kr</span>
+                        <button class="btn-add" onclick="addToCart('Chokladkaka', 50)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Cheesecake</h3>
+                        <p>Klassisk och cremig</p>
+                        <span class="pris">60 kr</span>
+                        <button class="btn-add" onclick="addToCart('Cheesecake', 60)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Frallor</h3>
+                        <p>Nybakad fralla med smör</p>
+                        <span class="pris">30 kr</span>
+                        <button class="btn-add" onclick="addToCart('Frallor', 30)">Lägg i Varukorg</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lunch" class="meny-category">
+                <div class="meny-grid">
+                    <div class="meny-item">
+                        <h3>Smörgås Skinka & Ost</h3>
+                        <p>Klassisk och mättande</p>
+                        <span class="pris">85 kr</span>
+                        <button class="btn-add" onclick="addToCart('Smörgås Skinka & Ost', 85)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Smörgås Räkor</h3>
+                        <p>Med räkor och dill</p>
+                        <span class="pris">95 kr</span>
+                        <button class="btn-add" onclick="addToCart('Smörgås Räkor', 95)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Smörgås Tonfisk</h3>
+                        <p>Med majonnäs och grönsaker</p>
+                        <span class="pris">85 kr</span>
+                        <button class="btn-add" onclick="addToCart('Smörgås Tonfisk', 85)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Smörgås Vegetarisk</h3>
+                        <p>Med hummus och grönsaker</p>
+                        <span class="pris">75 kr</span>
+                        <button class="btn-add" onclick="addToCart('Smörgås Vegetarisk', 75)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Sallad Caesar</h3>
+                        <p>Med kyckling och parmessan</p>
+                        <span class="pris">105 kr</span>
+                        <button class="btn-add" onclick="addToCart('Sallad Caesar', 105)">Lägg i Varukorg</button>
+                    </div>
+                    <div class="meny-item">
+                        <h3>Sallad Quinoa</h3>
+                        <p>Hälsosam och näringsrik</p>
+                        <span class="pris">95 kr</span>
+                        <button class="btn-add" onclick="addToCart('Sallad Quinoa', 95)">Lägg i Varukorg</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beställning Section -->
+    <section id="beställ" class="beställning">
+        <div class="container">
+            <h2>Din Beställning</h2>
+            <div class="beställning-container">
+                <div class="varukorg">
+                    <h3>Varukorg</h3>
+                    <div id="cartItems" class="cart-items">
+                        <p class="empty-cart">Varukorgen är tom</p>
+                    </div>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Summa:</span>
+                            <span id="cartTotal">0 kr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-form">
+                    <h3>Leveransuppgifter</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="namn">Namn *</label>
+                            <input type="text" id="namn" name="namn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon *</label>
+                            <input type="tel" id="telefon" name="telefon" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adress">Adress *</label>
+                            <input type="text" id="adress" name="adress" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stad">Stad *</label>
+                            <input type="text" id="stad" name="stad" value="Vänersborg" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postnummer">Postnummer *</label>
+                            <input type="text" id="postnummer" name="postnummer" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="leveranstid">Leveranstid *</label>
+                            <select id="leveranstid" name="leveranstid" required>
+                                <option value="">Välj tid</option>
+                                <option value="ASAP">Så snart som möjligt</option>
+                                <option value="12:00-13:00">12:00 - 13:00</option>
+                                <option value="13:00-14:00">13:00 - 14:00</option>
+                                <option value="14:00-15:00">14:00 - 15:00</option>
+                                <option value="15:00-16:00">15:00 - 16:00</option>
+                                <option value="16:00-17:00">16:00 - 17:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="anmarkning">Anmärkningar</label>
+                            <textarea id="anmarkning" name="anmarkning" rows="4" placeholder="Särskilda önskemål..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Slutför Beställning</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Om Oss Section -->
+    <section id="om-oss" class="om-oss">
+        <div class="container">
+            <h2>Om Cafe Cult</h2>
+            <div class="om-content">
+                <div class="om-text">
+                    <p>Cafe Cult är ett mysigt och trivsamt café i hjärtat av Vänersborg. Vi erbjuder världens bästa kaffe, handplockade bönor och bakverk från lokala bäckerare.</p>
+                    <p>Vår mission är att skapa en gemenskap kring kaffe och goda samtal. Vi tror på kvalitet, hållbarhet och att ta hand om våra gäster.</p>
+                    <h3>Våra Värden</h3>
+                    <ul>
+                        <li>☕ Högsta kaffekvalitet</li>
+                        <li>🌱 Hållbar och ekologisk</li>
+                        <li>❤️ Personlig service</li>
+                        <li>🤝 Gemenskap och gästfrihet</li>
+                    </ul>
+                </div>
+                <div class="om-info">
+                    <div class="info-box">
+                        <h4>Öppettider</h4>
+                        <p>Mån-Fre: 07:00 - 18:00</p>
+                        <p>Lör: 09:00 - 17:00</p>
+                        <p>Sön: 10:00 - 16:00</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Leverans</h4>
+                        <p>Vi levererar inom Vänersborg!</p>
+                        <p>Leveranspris: 50 kr</p>
+                        <p>Min beställning: 150 kr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="kontakt">
+        <div class="container">
+            <h2>Kontakta Oss</h2>
+            <div class="kontakt-content">
+                <div class="kontakt-info">
+                    <div class="kontakt-item">
+                        <h4>📍 Adress</h4>
+                        <p>Cafe Cult<br>Huvudgatan 42<br>462 31 Vänersborg</p>
+                    </div>
+                    <div class="kontakt-item">
+                        <h4>📞 Telefon</h4>
+                        <p><a href="tel:0521123456">0521-123456</a></p>
+                    </div>
+                    <div class="kontakt-item">
+                        <h4>📧 E-post</h4>
+                        <p><a href="mailto:info@cafecult.se">info@cafecult.se</a></p>
+                    </div>
+                    <div class="kontakt-item">
+                        <h4>🌐 Sociala Medier</h4>
+                        <p>
+                            <a href="#">Facebook</a> | 
+                            <a href="#">Instagram</a> | 
+                            <a href="#">Twitter</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="kontakt-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ditt namn" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Din e-post" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Ditt meddelande" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Skicka</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cafe Cult Vänersborg. All rights reserved.</p>
+            <p>☕ Där kaffe möter gemenskap ☕</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
