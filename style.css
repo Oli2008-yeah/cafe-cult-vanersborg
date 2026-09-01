@@ -39,11 +39,11 @@ body {
 }
 
 .logo {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-family: 'Georgia', 'Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
     color: #d4a574;
-    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -95,7 +95,7 @@ body {
 
 /* ===== HEM PAGE - Hero/Slowgun ===== */
 .hero-box {
-    background: linear-gradient(135deg, #2c1810 0%, #3d2515 100%);
+    background: linear-gradient(135deg, #5a3a2a 0%, #6b4423 100%);
     color: white;
     padding: 60px 40px;
     border-radius: 8px;
@@ -108,6 +108,8 @@ body {
     font-size: 3rem;
     margin-bottom: 10px;
     letter-spacing: 2px;
+    font-family: 'Georgia', 'Garamond', serif;
+    font-weight: 400;
 }
 
 .tagline {
