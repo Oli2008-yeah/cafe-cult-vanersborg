@@ -235,15 +235,6 @@ body {
     letter-spacing: 1px;
 }
 
-.page h1 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 2.5rem;
-    color: #2c1810;
-    margin: 40px 0 20px 0;
-    letter-spacing: 2px;
-    font-weight: 700;
-}
-
 .section-intro {
     font-size: 1.1rem;
     color: #666;
